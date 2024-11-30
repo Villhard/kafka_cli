@@ -8,7 +8,7 @@ CLI для Apache Kafka.
 Файл: `producer.py`
 - Отправка сообщений с `KafkaProducer`
 - Контекстный менеджер для управления ресурсами
-- Функция `send_message()` для отправки сообщений в UTF-8
+- Функция `send_message()` для отправки сообщения
 
 ### Consumer
 Файл: `consumer.py`
