@@ -14,7 +14,7 @@ def cli():
 @click.option("--topic", required=True, help="Kafka topic")
 @click.option("--message", required=True, help="Message to send")
 def produce(kafka, topic, message):
-    send_message(kafka, topic, message.encode("utf-8"))
+    send_message(kafka, topic, message)
 
 
 @cli.command

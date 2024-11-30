@@ -13,5 +13,5 @@ def _get_producer(kafka_server):
 
 def send_message(kafka_server, topic, message):
     with _get_producer(kafka_server) as producer:
-        producer.send(topic, message)
+        producer.send(topic, message.encode("utf-8"))
         producer.flush()
