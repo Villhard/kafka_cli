@@ -19,7 +19,7 @@ services:
       - zookeeper
 
   cli:
-    build: .
+    image: villhard/kafka-cli:latest
     container_name: cli
     depends_on:
       - kafka
