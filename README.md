@@ -20,3 +20,18 @@ CLI для Apache Kafka.
 Файл: `main.py`
 - `produce`: Отправка сообщения
 - `consume`: Чтение сообщений
+
+
+## Использование
+
+### Запуск
+
+`docker compose up -d`
+
+### Отправка сообщений
+
+`docker compose run cli produce --kafka kafka:9092 --topic hello --message "Hello, World"`
+
+### Получение сообщений
+
+`docker compose run cli consume --kafka kafka:9092 --topic hello`
