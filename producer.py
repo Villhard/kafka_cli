@@ -1,12 +1,17 @@
 from contextlib import contextmanager
+
 from kafka import KafkaProducer
+
+from logger import logger
 
 
 @contextmanager
 def _get_producer(kafka_server):
-    producer = KafkaProducer(bootstrap_servers=kafka_server)
     try:
+        producer = KafkaProducer(bootstrap_servers=kafka_server)
         yield producer
+    except Exception as e:
+        logger.error(f"Error creating producer: {e}")
     finally:
         producer.close()
 
