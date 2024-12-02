@@ -25,4 +25,4 @@ def _get_consumer(kafka_server, topic):
 def consume_messages(kafka_server, topic):
     with _get_consumer(kafka_server, topic) as consumer:
         for message in consumer:
-            print(message.value.decode("utf-8"))
+            logger.info(message.value.decode("utf-8"))
